@@ -1,0 +1,57 @@
+What is Vigenère Cipher?
+
+The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key.
+
+For example, if the plaintext is "attacking tonight" and the key is OCULORHINOLARINGOLOGY, then
+
+the first letter a of the plaintext is shifted by 14 positions in the alphabet (because the first letter O of the key is the 14th letter of the alphabet, counting from 0), yielding o;
+the second letter t is shifted by 2 (because the second letter C of the key means 2) yielding v;
+the third letter t is shifted by 20 (U) yielding n, with wrap-around;
+and so on; yielding the message ovnlqbpvt eoeqtnh. If the recipient of the message knows the key, they can recover the plaintext by reversing this process.
+
+The Vigenère cipher is therefore a special case of a polyalphabetic substitution.
+
+
+
+
+Caesar Cipher:
+
+1. It's a substitution cipher named after Julius Caesar, who is said to have used it to communicate with his generals.
+2. Each letter in the plaintext is shifted a certain number of places down or up the alphabet.
+3. For example, with a shift of 3, A becomes D, B becomes E, and so on.
+4. It's a monoalphabetic substitution cipher, meaning each letter is replaced by only one other letter throughout the message.
+
+
+Vigenère Cipher:
+
+1. It's an extension of the Caesar cipher, adding more security.
+2. Instead of using a constant shift for the entire message, it uses a keyword to determine the shift at each position.
+3. The keyword is repeated to match the length of the message.
+4. For example, if the keyword is "KEY" and the message is "HELLO," the shifts would be K->H, E->E, Y->L, K->L, E->O.
+5. This makes frequency analysis more difficult because the same letter in the plaintext might be encrypted to different letters depending on its position in the message.
+
+
+Comparison:
+
+1. Caesar is simpler; Vigenère is more complex.
+2. Caesar is vulnerable to frequency analysis due to its fixed shift; Vigenère adds complexity with varying shifts.
+3. Vigenère is generally more secure than Caesar.
+
+
+Breaking Them:
+
+1. Caesar is easily breakable, especially with frequency analysis.
+2. Vigenère is more challenging. Traditional frequency analysis might not work because the same letter in the plaintext can be encrypted differently. However, it's not unbreakable and can be solved using more sophisticated methods,
+    especially with longer messages.
+
+
+
+Note
+
+The Caesar cipher and the Vigenère cipher are both historical encryption methods, but they have some differences.
+
+The Caesar cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet. It's a straightforward method, but it can be easily broken with frequency analysis.
+
+On the other hand, the Vigenère cipher is a bit more complex. It uses a keyword to shift the letters in the plaintext. The key is repeated to match the length of the message. This makes it a bit more secure than the Caesar cipher, especially against frequency analysis.
+
+In a nutshell, Caesar cipher is like a single-shift code, while Vigenère adds a layer of complexity by using a keyword to determine the shift at each position. If you want simplicity, go with Caesar; if you're up for a challenge, try Vigenère!
